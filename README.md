@@ -12,6 +12,7 @@ Books are divided into shelves. Users can add books to a shelf, move and remove 
   - [Description](#description)
   - [Table of Contents](#table-of-contents)
   - [Setup](#setup)
+	- [Installation] (#installation)
     - [Clone Repository](#clone-repository)
     - [Database Creation](#database-creation)
     - [Running the API](#running-the-api)
