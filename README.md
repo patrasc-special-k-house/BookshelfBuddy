@@ -23,6 +23,31 @@ Books are divided into shelves. Users can add books to a shelf, move and remove 
 
 ## Setup
 
+### Installation
+
+1. SQL Server Management Studio (SSMS):
+a. Go to the official SSMS download page by Microsoft:
+```bash 
+https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms
+```
+b. Choose the latest version (SSMS 19.1) and click on the corresponding download link.
+c. The installation file will be downloaded to your computer. Double-click on it to start the installation.
+d. Follow the instructions in the installer to complete the installation of SSMS on your computer.
+
+2. Visual Studio 2022:
+a. Go to the official Visual Studio 2022 download page by Microsoft: 
+```bash
+https://visualstudio.microsoft.com/downloads/
+````
+b. Click on the "Download" button to download the installer for Visual Studio 2022.
+c. Open the downloaded installer and follow the instructions to install Visual Studio 2022.
+d. During the installation process, you will have the option to select specific workloads and individual components.
+e. In the Workloads tab, select the following workloads:
+ASP.NET and web development
+.NET desktop development
+f. Make any additional customizations or selections based on your preferences.
+g. Proceed with the installation and follow the final instructions to complete the installation of Visual Studio 2022 on your computer.
+
 ### Clone Repository
 
 Clone the repository to your local machine using the following command:
