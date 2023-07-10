@@ -2,9 +2,9 @@
 
 ## Description
 
-This simple application allows users to search for books and save them to a database. Users can also view their saved books and delete them from the database.
+Această aplicație simplă permite utilizatorilor să caute cărți și să le salveze într-o bază de date. Aceștia pot, de asemenea, să vizualizeze cărțile salvate și să le șteargă din baza de date.
 
-Books are divided into shelves. Users can add books to a shelf, move and remove them from a shelf. Users can also create new shelves.
+Cărțile sunt împărțite în rafturi. Utilizatorii pot adăuga cărți într-un raft, le pot muta și le pot înlătura dintr-un raft si de asemenea, să creeze rafturi noi.
 
 ## Table of Contents
 
