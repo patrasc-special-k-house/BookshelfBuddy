@@ -28,44 +28,41 @@ Books are divided into shelves. Users can add books to a shelf, move and remove 
 
 1. SQL Server Management Studio (SSMS):
 
-a. Go to the official SSMS download page by Microsoft:
-```bash 
+a. Accesează pagina oficială de descărcare a SSMS de la Microsoft:
+```bash
 https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms
 ```
 
-b. Choose the latest version (SSMS 19.1) and click on the corresponding download link.
+b. Alege cea mai recentă versiune (SSMS 19.1) și dă clic pe link-ul corespunzător pentru descărcare.
 
-c. The installation file will be downloaded to your computer. Double-click on it to 
-start the installation.
+c. Fișierul de instalare va fi descărcat pe computerul tău. Dublu-click pe el pentru a începe instalarea.
 
-d. Follow the instructions in the installer to complete the installation of SSMS on your computer.
+d. Urmează instrucțiunile din installer pentru a finaliza instalarea SSMS pe computerul tău.
 
 
 2. Visual Studio 2022:
 
-a. Go to the official Visual Studio 2022 download page by Microsoft: 
+a. Accesează pagina oficială de descărcare a Visual Studio 2022 de la Microsoft:
 ```bash
 https://visualstudio.microsoft.com/downloads/
 ````
 
-b. Click on the "Download" button to download the installer for Visual Studio 2022.
+b. Dă clic pe butonul "Download" pentru a descărca installer-ul pentru Visual Studio 2022.
 
-c. Open the downloaded installer and follow the instructions to install Visual Studio 2022.
+c. Deschide installer-ul descărcat și urmează instrucțiunile pentru a instala Visual Studio 2022.
 
-d. During the installation process, you will have the option to select specific workloads and individual components.
+d. În timpul procesului de instalare, vei avea opțiunea de a selecta  specific workloads si individual components.
 
-e. In the Workloads tab, select the following workloads:
-ASP.NET and web development
-.NET desktop development
+e. În fila "Workloads", selectează următoarele încărcări: ASP.NET and web development, .NET desktop development.
 
-f. Make any additional customizations or selections based on your preferences.
+f. Realizează orice customizări sau selecții suplimentare în funcție de preferințele tale.
 
-g. Proceed with the installation and follow the final instructions to complete the installation of Visual Studio 2022 on your computer.
+g. Continuă cu instalarea și urmează instrucțiunile finale pentru a finaliza instalarea Visual Studio 2022 pe computerul tău.
 
 
 ### Clone Repository
 
-Clone the repository to your local machine using the following command:
+Clonează repozitoriul pe computer-ul tau local folosind următoarea comandă:
 
 ```bash
 git clone https://github.com/tbtiberiu/BookshelfBuddy.git
@@ -73,28 +70,28 @@ git clone https://github.com/tbtiberiu/BookshelfBuddy.git
 
 ### Database Creation
 
-1. Open Solution in Visual Studio
-2. Open Package Manager Console
-3. Run `Update-Database` in the Package Manager Console
+1. Deschide soluția în Visual Studio
+2. Deschide Package Manager Console
+3. Rulează comanda `Update-Database` în Package Manager Console
    ```
    PM> Update-Database
    ```
 
 ### Running the API
 
-Run the API from Visual Studio (`F5`).
+Rulează API-ul din Visual Studio (F5).
 
-A console window will open and display the port the API is running on.
+Se va deschide o fereastră de consolă care va afișa portul pe care rulează API-ul.
 
-Open a browser and navigate to `localhost:7027/api/swagger/index.html` to view the Swagger UI for the API.
+Deschide un browser și navighează la localhost:7027/api/swagger/index.html pentru a vizualiza interfața Swagger pentru API.
 
 ### Register and Login
 
-Before using the API, you need to register a user and log in. Users can have roles of either `ShelfOwner` (0) or `Admin` (1).
+Înainte de a utiliza API-ul, trebuie să înregistrezi un utilizator și să te autentifici. Utilizatorii pot avea rolurile de `ShelfOwner` (0) sau `Admin` (1).
 
-To register a user, navigate to the `POST /api/Users/register` endpoint and click the `Try it out` button.
+Pentru a înregistra un utilizator, navighează către endpoint-ul `POST /api/Users/register` și dă clic pe butonul `Try it out`.
 
-Enter the following JSON in the `Request body` section:
+Introdu următorul JSON în secțiunea `Request body`:
 
 ```json
 {
@@ -106,11 +103,11 @@ Enter the following JSON in the `Request body` section:
 }
 ```
 
-Click the `Execute` button to register the user.
+Dă clic pe butonul `Execute` pentru a înregistra utilizatorul.
 
-To log in, navigate to the `POST /api/Users/login` endpoint and click the `Try it out` button.
+Pentru a te autentifica, navighează către endpoint-ul `POST /api/Users/login` și dă clic pe butonul `Try it out`.
 
-Enter the following JSON in the `Request body` section:
+Introdu următorul JSON în secțiunea `Request body`:
 
 ```json
 {
@@ -119,45 +116,45 @@ Enter the following JSON in the `Request body` section:
 }
 ```
 
-Click the `Execute` button to log in.
+Dă clic pe butonul `Execute` pentru a te autentifica.
 
-The response will contain a `token` that you can use to authenticate requests for the shelf owner created.
+Răspunsul va conține un `token` pe care îl poți utiliza pentru a autentifica cererile pentru deținătorul raftului creat.
 
-To authenticate requests, click the `Authorize` button at the top of the Swagger UI.
+Pentru a autentifica cererile, dă clic pe butonul `Authorize` în partea de sus a interfeței Swagger.
 
-Enter `bearer <token>` in the `Value` field and click the `Authorize` button.
+Introdu `bearer <token>` în câmpul Valoare și dă clic pe butonul `Authorize`.
 
-The `token` will be automatically added to the `Authorization` header for all requests.
+`Token-ul` va fi adăugat automat în antetul `Authorization` pentru toate cererile.
 
-Now you can use the API to search for books, create shelves, add books to shelves, move books between shelves and delete books from shelves.
+Acum poți utiliza API-ul pentru a căuta cărți, a crea rafturi, a adăuga cărți în rafturi, a muta cărți între rafturi și a șterge cărți din rafturi.
 
 ## Endpoints
 
 ### Books
 
-- `GET /api/Books` will return all books in the database.
+- `GET /api/Books` va returna toate cărțile din baza de date.
 
-- `GET /api/Books/{id}` will return the book with the specified id.
+- `GET /api/Books/{id}` va returna cartea cu id-ul specificat.
 
-- `POST /api/Books` will add a book to a shelf.
+- `POST /api/Books` va adăuga o carte pe un raft.
 
-- `PUT /api/Books` will update the book specified.
+- `PUT /api/Books` va actualiza cartea specificată.
 
-- `DELETE /api/Books/{id}` will delete the book with the specified id.
+- `DELETE /api/Books/{id}` va șterge cartea cu id-ul specificat.
 
 ### Shelves
 
-- `GET /api/Shelves` will return all shelves in the database.
+- `GET /api/Shelves` va returna toate rafturile din baza de date.
 
-- `GET /api/Shelves/{id}` will return the shelf with the specified id.
+- `GET /api/Shelves/{id}` va returna raftul cu id-ul specificat.
 
-- `POST /api/Shelves/admin` will add a shelf to the database for the admin user.
+- `POST /api/Shelves/admin` va adăuga un raft în baza de date pentru utilizatorul admin.
 
-- `POST /api/Shelves/shelfOwner` will add a shelf to the database for the authenticated user.
+- `POST /api/Shelves/shelfOwner` va adăuga un raft în baza de date pentru utilizatorul autentificat.
 
-- `PUT /api/Shelves` will update the shelf specified.
+- `PUT /api/Shelves` va actualiza raftul specificat.
 
-- `DELETE /api/Shelves/{id}` will delete the shelf with the specified id.
+- `DELETE /api/Shelves/{id}` va șterge raftul cu id-ul specificat.
 
 ## Database Diagram
 
