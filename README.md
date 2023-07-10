@@ -62,7 +62,7 @@ g. Continuă cu instalarea și urmează instrucțiunile finale pentru a finaliza
 
 ### Clone Repository
 
-Clonează repozitoriul pe computer-ul tau local folosind următoarea comandă:
+Clonează repozitoriul pe computerul tau local folosind următoarea comandă:
 
 ```bash
 git clone https://github.com/tbtiberiu/BookshelfBuddy.git
@@ -79,7 +79,7 @@ git clone https://github.com/tbtiberiu/BookshelfBuddy.git
 
 ### Running the API
 
-Rulează API-ul din Visual Studio (F5).
+Rulează API-ul din Visual Studio (`F5`).
 
 Se va deschide o fereastră de consolă care va afișa portul pe care rulează API-ul.
 
@@ -122,7 +122,7 @@ Răspunsul va conține un `token` pe care îl poți utiliza pentru a autentifica
 
 Pentru a autentifica cererile, dă clic pe butonul `Authorize` în partea de sus a interfeței Swagger.
 
-Introdu `bearer <token>` în câmpul Valoare și dă clic pe butonul `Authorize`.
+Introdu `bearer <token>` în câmpul `Value` și dă clic pe butonul `Authorize`.
 
 `Token-ul` va fi adăugat automat în antetul `Authorization` pentru toate cererile.
 
