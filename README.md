@@ -39,6 +39,7 @@ start the installation.
 
 d. Follow the instructions in the installer to complete the installation of SSMS on your computer.
 
+
 2. Visual Studio 2022:
 
 a. Go to the official Visual Studio 2022 download page by Microsoft: 
@@ -59,6 +60,7 @@ ASP.NET and web development
 f. Make any additional customizations or selections based on your preferences.
 
 g. Proceed with the installation and follow the final instructions to complete the installation of Visual Studio 2022 on your computer.
+
 
 ### Clone Repository
 
